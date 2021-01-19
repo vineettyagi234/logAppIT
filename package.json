@@ -6,9 +6,11 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
-    "materialize-css": "^1.0.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-moment": "^1.1.1",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
@@ -39,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@types/materialize-css": "^1.0.8",
     "concurrently": "^5.3.0",
     "json-server": "^0.16.3"
   },
