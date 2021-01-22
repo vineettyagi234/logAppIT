@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { addLog } from "../../actions/logActions";
 import M from "materialize-css/dist/js/materialize.min.js";
 
-const AddLogModel = () => {
+const AddLogModel = ({ addLog }) => {
   const [message, setMessage] = useState("");
   const [tech, setTech] = useState("");
   const [attention, setAttention] = useState(false);
@@ -11,7 +13,15 @@ const AddLogModel = () => {
     if (message === "" || tech === "") {
       M.toast({ html: "Please enter a message and tech" });
     } else {
-      console.log(message, tech, attention);
+      const newLog = {
+        message,
+        tech,
+        attention,
+        date: new Date(),
+      };
+
+      addLog(newLog);
+      M.toast({ html: `Log has been added by ${tech}` });
 
       setMessage("");
       setTech("");
@@ -86,4 +96,8 @@ const AddLogModel = () => {
   );
 };
 
-export default AddLogModel;
+AddLogModel.prototype = {
+  getLog: PropTypes.func.isRequired,
+};
+
+export default connect(null, { addLog })(AddLogModel);

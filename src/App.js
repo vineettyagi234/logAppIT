@@ -7,7 +7,9 @@ import Addbtn from "./component/layout/Addbtn";
 import AddLogsModel from "./component/logs/AddLogModel";
 import EditLogModal from "./component/logs/EditLogModel";
 import AddTechModal from "./component/techs/AddTechModal";
-import TechListModal from "./component/techs/AddTechModal";
+import TechListModal from "./component/techs/TechListModel";
+import { Provider } from "react-redux";
+import store from "./store";
 
 import "./App.css";
 import AddLogModal from "./component/logs/AddLogModel";
@@ -19,18 +21,20 @@ const App = () => {
   });
 
   return (
-    <Fragment className="App">
-      {" "}
-      <SearchBar />
-      <div className="container">
-        <Addbtn />
-        <EditLogModal />
-        <AddTechModal />
-        <AddLogModal />
-        <TechListModal />
-        <Logs />
-      </div>
-    </Fragment>
+    <Provider store={store}>
+      <Fragment>
+        {" "}
+        <SearchBar />
+        <div className="container">
+          <Addbtn />
+          <EditLogModal />
+          <AddTechModal />
+          <AddLogModal />
+          <TechListModal />
+          <Logs />
+        </div>
+      </Fragment>
+    </Provider>
   );
 };
 
