@@ -4,7 +4,6 @@ import M from "materialize-css/dist/js/materialize.min.js";
 import SearchBar from "./component/layout/SearchBar";
 import Logs from "./component/logs/Logs";
 import Addbtn from "./component/layout/Addbtn";
-import AddLogsModel from "./component/logs/AddLogModel";
 import EditLogModal from "./component/logs/EditLogModel";
 import AddTechModal from "./component/techs/AddTechModal";
 import TechListModal from "./component/techs/TechListModel";

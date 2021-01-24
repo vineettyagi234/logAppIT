@@ -1,11 +1,11 @@
 {
   "logs": [
     {
-      "message": "1122 wireless down",
-      "attention": true,
-      "tech": "Sara Wilson",
-      "date": "2019-05-31T15:46:48.690Z",
-      "id": 3
+      "id": 3,
+      "message": "1122 wireless up",
+      "attention": false,
+      "tech": "John Doe",
+      "date": "2021-01-23T07:49:19.737Z"
     },
     {
       "id": 6,
@@ -27,13 +27,6 @@
       "attention": true,
       "tech": "Sam Smith",
       "date": "2021-01-22T09:37:05.189Z"
-    },
-    {
-      "message": "Super new log",
-      "tech": "Sara Wilson",
-      "attention": false,
-      "date": "2021-01-22T09:36:47.080Z",
-      "id": 9
     }
   ],
   "techs": [
@@ -51,6 +44,11 @@
       "id": 3,
       "firstName": "Sara",
       "lastName": "Wilson"
+    },
+    {
+      "firstName": "Vineet",
+      "lastName": "Tyagi",
+      "id": 4
     }
   ]
 }
